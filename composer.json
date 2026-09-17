@@ -1,0 +1,99 @@
+{
+    "name": "microscrap/scrapyard-evdev",
+    "description": "Linux evdev gamepads as Venusian Surface input circuits: scanning, positional buttons, normalised axes, hot-unplug",
+    "type": "library",
+    "version": "0.8.0",
+    "keywords": [
+        "scrapyard-io",
+        "evdev",
+        "gamepad",
+        "input",
+        "surface"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Angel Gonzalez",
+            "email": "angel@projectsaturnstudios.com"
+        }
+    ],
+    "require": {
+        "php": "^8.4|^8.5|^8.6",
+        "ext-posi": "^0.8.0",
+        "microscrap/evdev": "^0.8.0",
+        "surface/contracts": "^0.8.0",
+        "surface/human-input": "^0.8.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Microscrap\\ScrapyardEvdev\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Microscrap\\ScrapyardEvdev\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.8.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Volumes/ProjectSaturnStudios/Development/PHP/ProjectSaturnStudios/dev/microscrap/evdev",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/Volumes/ProjectSaturnStudios/Development/PHP/ProjectSaturnStudios/dev/microscrap/posix",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/Volumes/ProjectSaturnStudios/Development/PHP/ProjectSaturnStudios/dev/venusian/surface/src/Surface/*",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "surface/contracts": "0.8.0",
+                    "surface/human-input": "0.8.0"
+                }
+            }
+        },
+        {
+            "type": "path",
+            "url": "/Volumes/ProjectSaturnStudios/Development/PHP/ProjectSaturnStudios/dev/venusian/framework/src/Voyager/*",
+            "options": {
+                "symlink": true,
+                "versions": {
+                    "venusian-voyager/collections": "0.8.8",
+                    "venusian-voyager/conditionable": "0.8.8",
+                    "venusian-voyager/config": "0.8.8",
+                    "venusian-voyager/contracts": "0.8.8",
+                    "venusian-voyager/io-pools": "0.8.8",
+                    "venusian-voyager/macroable": "0.8.8",
+                    "venusian-voyager/magic-aliases": "0.8.8",
+                    "venusian-voyager/nuts-and-bolts": "0.8.8",
+                    "venusian-voyager/reflection": "0.8.8",
+                    "venusian-voyager/vessel": "0.8.8"
+                }
+            }
+        }
+    ]
+}
